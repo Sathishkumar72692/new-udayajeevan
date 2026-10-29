@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Women Empowerment | Udaya Jeevan Trust</title><meta name="description" content="Community-centred opportunities for women."><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+<style id="ujt-page-loader-styles">
+#ujt-page-loader{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.97);opacity:1;visibility:visible;transition:opacity .35s ease,visibility .35s ease}
+#ujt-page-loader.ujt-loader-hidden{opacity:0;visibility:hidden;pointer-events:none}
+#ujt-page-loader .ujt-loader-content{display:flex;flex-direction:column;align-items:center;gap:18px;padding:28px;text-align:center}
+#ujt-page-loader .ujt-logo-wrap{width:118px;height:118px;border-radius:50%;display:grid;place-items:center;background:#fff;box-shadow:0 8px 30px rgba(20,70,60,.13);animation:ujt-logo-pulse 1.5s ease-in-out infinite;overflow:hidden}
+#ujt-page-loader .ujt-logo{width:100%;height:100%;object-fit:contain;padding:8px}
+#ujt-page-loader .ujt-spinner{width:38px;height:38px;border:3px solid rgba(19,112,92,.16);border-top-color:#16745f;border-right-color:#e1ad52;border-radius:50%;animation:ujt-spin .8s linear infinite}
+#ujt-page-loader .ujt-loader-title{margin:0;color:#176b59;font-family:inherit;font-size:17px;font-weight:700;letter-spacing:.3px}
+#ujt-page-loader .ujt-loader-subtitle{margin:-10px 0 0;color:#66756f;font-family:inherit;font-size:13px}
+@keyframes ujt-spin{to{transform:rotate(360deg)}}
+@keyframes ujt-logo-pulse{0%,100%{transform:scale(1);box-shadow:0 8px 30px rgba(20,70,60,.13)}50%{transform:scale(1.045);box-shadow:0 12px 36px rgba(20,70,60,.2)}}
+@media(prefers-reduced-motion:reduce){#ujt-page-loader *,#ujt-page-loader{animation:none!important;transition:none!important}}
+</style>
+<script id="ujt-page-loader-script">
+(function(){
+  function initLoader(){
+    if(document.getElementById('ujt-page-loader')) return;
+    var loader=document.createElement('div');
+    loader.id='ujt-page-loader';
+    loader.setAttribute('role','status');
+    loader.setAttribute('aria-live','polite');
+    loader.innerHTML='<div class="ujt-loader-content"><div class="ujt-logo-wrap"><img class="ujt-logo" src="assets/udaya-jeevan-logo.jpeg" alt="Udaya Jeevan Trust logo"></div><div class="ujt-spinner" aria-hidden="true"></div><p class="ujt-loader-title">Udaya Jeevan Trust</p><p class="ujt-loader-subtitle">Together, building a better tomorrow…</p></div>';
+    document.body.appendChild(loader);
+    function hide(){loader.classList.add('ujt-loader-hidden');}
+    window.addEventListener('pageshow',function(){window.setTimeout(hide,180);});
+    document.addEventListener('click',function(e){
+      var a=e.target.closest && e.target.closest('a[href]');
+      if(!a || e.defaultPrevented || e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var href=a.getAttribute('href')||'';
+      if(!href || href.charAt(0)==='#' || href.toLowerCase().startsWith('javascript:') || a.hasAttribute('download') || (a.target && a.target!=='_self')) return;
+      var url;
+      try{url=new URL(a.href,window.location.href);}catch(_){return;}
+      if(url.origin!==window.location.origin || (url.pathname===window.location.pathname && url.search===window.location.search && url.hash)) return;
+      loader.classList.remove('ujt-loader-hidden');
+    });
+    window.addEventListener('beforeunload',function(){loader.classList.remove('ujt-loader-hidden');});
+    window.setTimeout(hide,1200);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initLoader); else initLoader();
+})();
+</script>
+
+</head><body><div id="site-header"></div><main><section class="page-hero"><div class="page-hero-inner"><span class="eyebrow light">Udaya Jeevan Trust</span><h1>Supporting confidence, choice and leadership.</h1><p>Community-centred opportunities for women.</p><div class="breadcrumb"><a href="index.html">Home</a> / <a href="programs.html">Women Empowerment</a></div></div></section><section class="section-pad"><div class="section-heading"><span class="eyebrow">Women Empowerment</span><h2>Women Empowerment</h2><p>Community-centred opportunities for women.</p></div><div class="two-col"><div><h3>Supporting confidence, choice and leadership.</h3><p>Possible programme areas include self-help group support, financial literacy, rights awareness, digital skills, leadership development and access to local support networks. Activities should be planned with women and reflect their stated priorities.</p><p>Add current programme locations, dates, participation details and verified outcomes.</p><a class="btn btn-primary" href="contact.html">Contact the Trust ↗</a></div><div class="program-image-wrap"><img class="program-feature-image" src="assets/women empowerment.jpeg" alt="Women empowerment programme" loading="lazy"><p class="program-image-caption">Women empowerment programme</p></div></div></section></main><div id="site-footer"></div><script src="script.js"></script></body></html>

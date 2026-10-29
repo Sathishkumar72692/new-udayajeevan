@@ -12,7 +12,23 @@ if (header) {
       </a>
       <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-navigation">☰</button>
       <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="programs.html">Programmes</a><a href="impact.html">Our Impact</a><a href="stories.html">Stories</a><a href="future-vision.html">Our Vision</a><a href="contact.html">Contact</a><a class="nav-donate" href="get-involved.html">Donate / Support ↗</a>
+        <a href="index.html">Home</a>
+        <div class="nav-group"><a href="about.html" class="nav-parent">About Us <span class="nav-chevron">⌄</span></a><div class="nav-dropdown">
+          <a href="about.html">Overview</a><a href="our-story.html">Our Story</a><a href="vision-mission.html">Vision &amp; Mission</a><a href="objectives.html">Objectives</a><a href="leadership.html">Leadership</a><a href="trust-details.html">Trust Details</a>
+        </div></div>
+        <div class="nav-group"><a href="programs.html" class="nav-parent">Our Programmes <span class="nav-chevron">⌄</span></a><div class="nav-dropdown">
+          <a href="women-empowerment.html">Women Empowerment</a><a href="child-development.html">Child Development</a><a href="health-welfare.html">Health &amp; Welfare</a><a href="livelihoods.html">Livelihoods</a><a href="awareness-campaigns.html">Awareness Campaigns</a><a href="training.html">Training</a>
+        </div></div>
+        <div class="nav-group"><a href="impact.html" class="nav-parent">Impact &amp; Stories <span class="nav-chevron">⌄</span></a><div class="nav-dropdown">
+          <a href="achievements.html">Achievements</a><a href="stories.html">Success Stories</a><a href="photo-gallery.html">Photo Gallery</a><a href="future-vision.html">Future Vision 2026–2030</a>
+        </div></div>
+        <div class="nav-group"><a href="reports.html" class="nav-parent">Reports &amp; Transparency <span class="nav-chevron">⌄</span></a><div class="nav-dropdown">
+          <a href="annual-reports.html">Annual Reports</a><a href="trust-documents.html">Trust Documents</a><a href="financial-reports.html">Financial Reports</a><a href="verified-registrations.html">Verified Registrations</a>
+        </div></div>
+        <div class="nav-group"><a href="get-involved.html" class="nav-parent">Get Involved <span class="nav-chevron">⌄</span></a><div class="nav-dropdown">
+          <a href="donate.html">Donate</a><a href="volunteer.html">Volunteer</a><a href="institutional-partnerships.html">Institutional Partnerships</a><a href="csr-enquiries.html">CSR Enquiries</a>
+        </div></div>
+        <a href="contact.html">Contact Us</a>
       </nav>
     </div>
   </header>`;
@@ -24,8 +40,19 @@ if (header) {
     menuButton.setAttribute("aria-label", open ? "Close navigation menu" : "Open navigation menu");
     menuButton.textContent = open ? "×" : "☰";
   });
+  nav.querySelectorAll(".nav-group > .nav-parent").forEach(parent => {
+    parent.addEventListener("click", event => {
+      if (window.matchMedia("(max-width: 900px)").matches) {
+        event.preventDefault();
+        const group = parent.closest(".nav-group");
+        const wasOpen = group.classList.contains("open");
+        nav.querySelectorAll(".nav-group.open").forEach(item => item.classList.remove("open"));
+        if (!wasOpen) group.classList.add("open");
+      }
+    });
+  });
   nav.querySelectorAll("a").forEach(link => {
-    if (link.getAttribute("href") === currentFile) link.classList.add("active");
+    if (link.getAttribute("href") === currentFile) { link.classList.add("active"); const group = link.closest(".nav-group"); if (group) group.querySelector(".nav-parent")?.classList.add("active"); }
     link.addEventListener("click", () => {
       nav.classList.remove("open");
       menuButton.setAttribute("aria-expanded", "false");
@@ -51,7 +78,7 @@ if (footer) {
   if (year) year.textContent = new Date().getFullYear();
 }
 
-// Accessible animated impact counters; figures are illustrative until verified.
+// Accessible animated counters for non-impact navigation highlights.
 const counters = document.querySelectorAll("[data-count]");
 if ("IntersectionObserver" in window && counters.length) {
   const observer = new IntersectionObserver(entries => {
@@ -84,6 +111,7 @@ document.querySelectorAll("[data-mail-form]").forEach(form => {
     const body = [
       `Name: ${data.get("name")}`,
       `Email: ${data.get("email")}`,
+      `Phone: ${data.get("phone") || "Not supplied"}`,
       `Organisation: ${data.get("organisation") || "Not supplied"}`,
       `Interest: ${data.get("interest") || "General enquiry"}`,
       "",

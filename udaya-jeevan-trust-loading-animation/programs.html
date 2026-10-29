@@ -1,0 +1,53 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Our Programmes | Udaya Jeevan Trust</title><meta name="description" content="Programme areas of Udaya Jeevan Trust covering women, children, health, livelihoods, awareness and training."><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+<style id="ujt-page-loader-styles">
+#ujt-page-loader{position:fixed;inset:0;z-index:999999;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.97);opacity:1;visibility:visible;transition:opacity .35s ease,visibility .35s ease}
+#ujt-page-loader.ujt-loader-hidden{opacity:0;visibility:hidden;pointer-events:none}
+#ujt-page-loader .ujt-loader-content{display:flex;flex-direction:column;align-items:center;gap:18px;padding:28px;text-align:center}
+#ujt-page-loader .ujt-logo-wrap{width:118px;height:118px;border-radius:50%;display:grid;place-items:center;background:#fff;box-shadow:0 8px 30px rgba(20,70,60,.13);animation:ujt-logo-pulse 1.5s ease-in-out infinite;overflow:hidden}
+#ujt-page-loader .ujt-logo{width:100%;height:100%;object-fit:contain;padding:8px}
+#ujt-page-loader .ujt-spinner{width:38px;height:38px;border:3px solid rgba(19,112,92,.16);border-top-color:#16745f;border-right-color:#e1ad52;border-radius:50%;animation:ujt-spin .8s linear infinite}
+#ujt-page-loader .ujt-loader-title{margin:0;color:#176b59;font-family:inherit;font-size:17px;font-weight:700;letter-spacing:.3px}
+#ujt-page-loader .ujt-loader-subtitle{margin:-10px 0 0;color:#66756f;font-family:inherit;font-size:13px}
+@keyframes ujt-spin{to{transform:rotate(360deg)}}
+@keyframes ujt-logo-pulse{0%,100%{transform:scale(1);box-shadow:0 8px 30px rgba(20,70,60,.13)}50%{transform:scale(1.045);box-shadow:0 12px 36px rgba(20,70,60,.2)}}
+@media(prefers-reduced-motion:reduce){#ujt-page-loader *,#ujt-page-loader{animation:none!important;transition:none!important}}
+</style>
+<script id="ujt-page-loader-script">
+(function(){
+  function initLoader(){
+    if(document.getElementById('ujt-page-loader')) return;
+    var loader=document.createElement('div');
+    loader.id='ujt-page-loader';
+    loader.setAttribute('role','status');
+    loader.setAttribute('aria-live','polite');
+    loader.innerHTML='<div class="ujt-loader-content"><div class="ujt-logo-wrap"><img class="ujt-logo" src="assets/udaya-jeevan-logo.jpeg" alt="Udaya Jeevan Trust logo"></div><div class="ujt-spinner" aria-hidden="true"></div><p class="ujt-loader-title">Udaya Jeevan Trust</p><p class="ujt-loader-subtitle">Together, building a better tomorrow…</p></div>';
+    document.body.appendChild(loader);
+    function hide(){loader.classList.add('ujt-loader-hidden');}
+    window.addEventListener('pageshow',function(){window.setTimeout(hide,180);});
+    document.addEventListener('click',function(e){
+      var a=e.target.closest && e.target.closest('a[href]');
+      if(!a || e.defaultPrevented || e.button!==0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      var href=a.getAttribute('href')||'';
+      if(!href || href.charAt(0)==='#' || href.toLowerCase().startsWith('javascript:') || a.hasAttribute('download') || (a.target && a.target!=='_self')) return;
+      var url;
+      try{url=new URL(a.href,window.location.href);}catch(_){return;}
+      if(url.origin!==window.location.origin || (url.pathname===window.location.pathname && url.search===window.location.search && url.hash)) return;
+      loader.classList.remove('ujt-loader-hidden');
+    });
+    window.addEventListener('beforeunload',function(){loader.classList.remove('ujt-loader-hidden');});
+    window.setTimeout(hide,1200);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initLoader); else initLoader();
+})();
+</script>
+
+</head><body><div id="site-header"></div><main><section class="page-hero"><div class="page-hero-inner"><span class="eyebrow light">Our programmes</span><h1>Practical support.<br><span>Opportunity for all.</span></h1><p>The activities below describe programme areas and intended initiatives. Availability, eligibility and schedules may vary; contact the Trust for current information.</p><div class="breadcrumb"><a href="index.html">Home</a> / Our Programmes</div></div></section>
+<section class="section-pad"><div class="content-grid">
+<article class="content-card" id="women"><span class="card-symbol">♡</span><span class="eyebrow">01 / Women Empowerment</span><h2>Confidence and financial independence</h2><p>Programme areas aim to strengthen confidence, decision-making, leadership and livelihood choices for women.</p><ul><li>Self-Help Group (SHG) formation and strengthening</li><li>Financial literacy and banking awareness</li><li>Women's entrepreneurship development</li><li>Tailoring and handicrafts training</li><li>Food-processing skills</li><li>Beauty-care skills training</li><li>Leadership development</li><li>Micro-enterprise support</li></ul></article>
+<article class="content-card" id="children"><span class="card-symbol">📚</span><span class="eyebrow">02 / Child Development</span><h2>Learning, protection and growth</h2><p>Education, nutrition, creativity and child protection are important to equal opportunities for every child.</p><ul><li>After-school tuition and learning support</li><li>Scholarships for girls, subject to availability and eligibility</li><li>Child-rights awareness</li><li>Digital literacy</li><li>Nutrition support</li><li>Creative and extracurricular activities</li><li>School-attendance improvement initiatives</li></ul></article>
+<article class="content-card" id="health"><span class="card-symbol">✚</span><span class="eyebrow">03 / Health and Welfare</span><h2>Awareness and connections to care</h2><p>Intended activities focus on informed health choices, prevention awareness and links to qualified providers.</p><ul><li>Free medical camps, where organised</li><li>Women's health check-ups</li><li>Maternal and child health awareness</li><li>Nutrition awareness</li><li>Menstrual hygiene education</li><li>Community health screening</li><li>Vaccination awareness</li></ul></article>
+<article class="content-card" id="livelihood"><span class="card-symbol">↗</span><span class="eyebrow">04 / Livelihood and Financial Inclusion</span><h2>Skills to income opportunities</h2><p>Vocational skills, entrepreneurship and financial awareness can help individuals and families work towards sustainable income.</p><ul><li>Micro-business development support</li><li>Skill-to-income initiatives</li><li>Handmade-product development</li><li>Cooperative production opportunities</li><li>Digital marketing training</li><li>E-commerce training</li><li>Institutional finance facilitation</li></ul></article>
+<article class="content-card" id="awareness"><span class="card-symbol">◉</span><span class="eyebrow">05 / Awareness and Social Campaigns</span><h2>Rights, safety and participation</h2><p>Awareness activities aim to promote equality, safety, social responsibility and access to information.</p><ul><li>Women's rights awareness</li><li>Domestic-violence awareness</li><li>Self-defence training for girls</li><li>Girl-child awareness initiatives</li><li>Anti-child-labour awareness</li><li>Community development surveys</li></ul></article>
+<article class="content-card" id="training"><span class="card-symbol">✦</span><span class="eyebrow">06 / Training and Capacity Building</span><h2>Skills for confidence and employability</h2><p>Training areas are intended to strengthen employability, digital confidence, communication, entrepreneurship and awareness of rights.</p><ul><li>Computer training for women</li><li>Spoken English training</li><li>Digital marketing</li><li>Entrepreneurship training</li><li>Vocational and skill-development programmes</li><li>Legal-aid clinics and counselling support, where available</li><li>Research and awareness initiatives on women's safety</li></ul></article>
+</div><div class="notice-panel" style="margin-top:28px"><strong>Programme availability may vary.</strong> Activities, batches, services and eligibility are subject to current resources and arrangements. Please contact the Trust to confirm current availability. The descriptions above do not imply that every service is continuously operating.</div></section>
+<section class="final-cta section-pad"><div><span class="eyebrow">Get involved</span><h2>Interested in supporting a programme?</h2><p>Enquire about volunteering, training support or institutional collaboration.</p></div><a class="btn btn-orange" href="get-involved.html">Explore ways to help ↗</a></section></main><div id="site-footer"></div><script src="script.js"></script></body></html>
